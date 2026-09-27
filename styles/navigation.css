@@ -1,0 +1,44 @@
+header {
+  width: 100%;
+}
+
+.pink {
+  background-color: #e8869a;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.pink h1 {
+  margin: 0;
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Rubik", sans-serif;
+}
+
+.nav-bar {
+  background-color: #f2ede1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+}
+
+.logo {
+  height: 90px;
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+}
+
+.links a {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--black);
+  font-family: "Rubik", sans-serif;
+}

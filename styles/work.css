@@ -1,0 +1,58 @@
+.work{
+  position: relative;
+  background-color: var(--darkgreen);
+  color: var(--white);
+  /* height se nastaví přes JS podle šířky obsahu */
+}
+
+.work-sticky{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-sticky h2{
+  margin-bottom: 25px;
+  font-family: "Rubik", sans-serif;
+  flex-shrink: 0;
+}
+
+.work-scroll{
+  display: flex;
+  gap: 60px;
+  flex: 1;
+  align-items: center;
+  will-change: transform; /* pro plynulejší animaci */
+}
+
+.work-card{
+  flex: 0 0 auto;
+  width: 45vw;
+}
+
+.work-card img{
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.work-card h3{
+  font-size: 24px;
+  font-family: "Rubik", sans-serif;
+  margin: 0 0 8px 0;
+}
+
+.work-card p{
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.85;
+  font-family: "Rubik", sans-serif;
+}
+

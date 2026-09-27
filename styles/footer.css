@@ -1,0 +1,13 @@
+.contacts{
+    background-color: var(--white);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts p{
+    font-size: 38px;
+    color: var(--darkgreen);
+}

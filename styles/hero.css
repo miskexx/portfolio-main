@@ -1,0 +1,73 @@
+.hero{
+  background-color: var(--lightgreen);
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: relative; /* klíčové - kotva pro absolutně umístěný hobbies box */
+  z-index: 1;
+  height: 100vh;
+}
+
+.hero-left{
+  flex: 1;
+}
+
+.hero-left p{
+  font-size: 56px;
+  color: var(--white);
+}
+
+.hero-mid{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.me{
+  width: 17vw;
+}
+
+.hero-right{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.hero-right p{
+  color: var(--white);
+  font-size: 24px;
+}
+
+.hobbies{
+  background-color: var(--white); 
+  width: 25vw;
+  padding: 20px 25px;
+  border-radius: 1px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -400px; /* posune box pod spodní hranu .hero - uprav podle výšky obsahu */
+  z-index: 2; /* aby byl nad sekcí .skills */
+}
+
+.hobbies p{
+  color: var(--black);
+  margin: 0 0 10px 0;
+  font-size: 42px;
+  letter-spacing: 0.05em;
+}
+
+.hobbies ul{
+  color: var(--black);
+  margin: 0;
+  padding-left: 32px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: "Rubik", sans-serif;
+}

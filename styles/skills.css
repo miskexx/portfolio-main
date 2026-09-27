@@ -1,0 +1,57 @@
+.skills{
+  background-color: var(--pink);
+  position: relative;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.education{
+  background-color: var(--darkgreen);
+  color: var(--white);
+  width: 30%;
+  padding: 25px;
+  border-radius: 1px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  position: absolute;
+  left: 50px;
+  top: -80px; /* vytáhne box nahoru, aby přesahoval do .hero */
+  z-index: 2;
+}
+
+.education p.handwritten{
+  font-size: 38px;
+}
+
+.education p{
+  margin: 4px 0;
+}
+
+
+.technical-skills{
+  margin-left: calc(40% + 40px); /* posun, aby text nekolidoval s education boxem */
+  margin-top: 35vh;
+  flex: 1;
+}
+
+.technical-skills p{
+    margin-bottom: 15px;
+    font-size: 38px;
+    color: var(--black);
+}
+
+.skills-columns{
+  display: flex;
+  gap: 15vw;
+}
+
+.skills-columns ul{
+  font-family: "Rubik", sans-serif;
+  list-style: disc;
+  font-size: 1.2rem;
+  padding-left: 18px;
+  line-height: 1.8;
+  color: var(--black);
+
+}

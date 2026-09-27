@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "Miskiefont";
+  src: url("../Miskiefont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.handwritten {
+  font-family: "Miskiefont", sans-serif;
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+:root {
+  --pink: #EE979F;
+  --white: #F4F0E6;
+  --lightgreen: #4B9E74;
+  --darkgreen: #204830;
+
+  --black:#3D3A33;
+}
+
+body {
+  margin: 0;
+  padding: 0rem;
+  background-color: var(--white);
+}
