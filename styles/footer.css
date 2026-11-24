@@ -1,13 +1,90 @@
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
 .contacts{
-    background-color: var(--white);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  min-height: 80vh;
+  padding: 130px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  text-align: center;
+
+  /* stejná růžová s mřížkou jako sekce skills */
+  background-color: var(--pink);
+  background-image: var(--grid-img);
+  background-size: var(--grid-size) var(--grid-size);
 }
 
-.contacts p{
-    font-size: 38px;
-    color: var(--darkgreen);
+/* tmavě zelená vlna nahoře: work "zatéká" do růžové */
+.contacts::before{
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath fill='%23204830' d='M0,0 L1440,0 L1440,60 C1200,0 960,120 720,60 C480,0 240,120 0,60 Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
 }
+
+/* ---------- text ---------- */
+
+.footer-title{
+  margin: 0;
+  font-size: clamp(64px, 9vw, 130px);
+  font-weight: normal;
+  line-height: 1;
+  color: var(--darkgreen);
+}
+
+/* krémové zvýraznění pod textem, stejný princip jako u jména v hero */
+.footer-title span{
+  background: linear-gradient(transparent 60%, var(--white) 60%);
+  padding: 0 10px;
+}
+
+.footer-text{
+  margin: 0;
+  max-width: 420px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--black);
+}
+
+/* ---------- tlačítka (základ .btn je v hero.css) ---------- */
+
+.footer-actions{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.contacts .btn:hover{
+  background: var(--darkgreen);
+  color: var(--white);
+}
+
+/* ---------- podpis ---------- */
+
+.footer-sign{
+  margin: 40px 0 0 0;
+  font-size: 30px;
+  color: var(--darkgreen);
+}
+
+/* ---------- ozdoby (.deco a animace float jsou v hero.css) ---------- */
+
+.contacts .deco{
+  pointer-events: none;
+}
+
+.f1{ top: 30%; left: 12%; }
+.f2{ bottom: 20%; right: 14%; font-size: 44px; color: var(--darkgreen); animation-delay: -2s; }
+.f3{ top: 40%; right: 10%; font-size: 20px; animation-delay: -1s; }

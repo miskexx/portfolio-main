@@ -1,3 +1,7 @@
+/* ==========================================================
+   WORK SECTION
+   ========================================================== */
+
 .work{
   position: relative;
   background-color: var(--darkgreen);
@@ -5,19 +9,42 @@
   /* height se nastaví přes JS podle šířky obsahu */
 }
 
+/* ---------- vlna nahoře ---------- */
+
+.wave-top{
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 2;
+
+  background-color: var(--pink);
+  background-image: var(--grid-img);
+  background-size: var(--grid-size) var(--grid-size);
+  background-position: 0 calc(1px - 100vh);   /* navazuje na mřížku ve spodku .skills */
+
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L1440,0 L1440,60 C1200,0 960,120 720,60 C480,0 240,120 0,60 Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L1440,0 L1440,60 C1200,0 960,120 720,60 C480,0 240,120 0,60 Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+
+.wave-top svg{ display: none; }
+
+/* ---------- sticky kontejner ---------- */
+
 .work-sticky{
   position: sticky;
   top: 0;
   height: 100vh;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 60px 50px;
+  padding: 100px 50px 50px;   /* nahoře místo pro vlnu */
   display: flex;
   flex-direction: column;
 }
 
 .work-sticky h2{
-  margin-bottom: 25px;
+  margin: 0 0 25px 0;
   font-family: "Rubik", sans-serif;
   flex-shrink: 0;
 }
@@ -27,21 +54,111 @@
   gap: 60px;
   flex: 1;
   align-items: center;
-  will-change: transform; /* pro plynulejší animaci */
+  will-change: transform;      /* pro plynulejší animaci */
 }
 
+/* ---------- karta projektu ---------- */
+
 .work-card{
+  position: relative;
   flex: 0 0 auto;
   width: 45vw;
 }
 
-.work-card img{
-  width: 100%;
-  height: 45vh;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 15px;
+/* velké číslo projektu */
+.num{
+  position: absolute;
+  top: -34px;
+  right: 10px;
+  z-index: 1;
+  font-family: "Rubik", sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--pink);
+  pointer-events: none;
 }
+
+/* ---------- okno prohlížeče ---------- */
+
+.browser{
+  display: block;
+  position: relative;
+  border: 2px solid var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 6px 6px 0 var(--pink);
+  margin-bottom: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.browser:hover{
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--pink);
+}
+
+.browser-bar{
+  background: var(--white);
+  padding: 8px 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.browser-bar i{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--black);
+  opacity: 0.35;
+}
+
+.browser-bar i:first-child{
+  background: var(--pink);
+  opacity: 1;
+}
+
+.browser img{
+  display: block;
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 0;
+  transition: transform 0.4s ease;
+}
+
+.browser:hover img{
+  transform: scale(1.04);
+}
+
+/* "Visit" štítek při najetí */
+/* "Visit" štítek při najetí */
+.browser::after{
+  content: "✦  Visit site";
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  background: var(--white);
+  color: var(--black);
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  white-space: pre;            /* zachová mezeru za hvězdičkou */
+  padding: 7px 16px;
+  border: 2px solid var(--pink);
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 var(--pink);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.browser:hover::after{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- text karty ---------- */
 
 .work-card h3{
   font-size: 24px;
@@ -52,7 +169,42 @@
 .work-card p{
   font-size: 0.9rem;
   line-height: 1.5;
+  margin: 0;
   opacity: 0.85;
   font-family: "Rubik", sans-serif;
 }
 
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tags span{
+  font-family: "Rubik", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--white);
+  border: 1.5px solid var(--white);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+
+/* ==========================================================
+   Patří do hero (zůstalo tu z dřívějška, klidně přesuň do hero.css)
+   ========================================================== */
+
+.highlight{
+  background: linear-gradient(transparent 60%, var(--pink) 60%);
+  padding: 0 6px;
+}
+
+.hero-left p{
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp{
+  from{ opacity: 0; transform: translateY(20px); }
+  to{ opacity: 1; transform: translateY(0); }
+}

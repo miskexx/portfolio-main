@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/skills.css">
   <link rel="stylesheet" href="styles/work.css">
   <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/cards.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -19,8 +20,11 @@
 
   <header>
     <div class="pink">
-      <h1>2026</h1>
+      <div class="strip" aria-hidden="true">
+        <span>✦</span><span>PORTFOLIO</span><span>✦</span><span>2026</span><span>✦</span><span>MISKIEXX</span><span>✦</span>
+      </div>
     </div>
+
     <div class="nav-bar">
       <img src="assets/logo.png" alt="Portfolio logo" class="logo">
       <nav class="links">
@@ -34,109 +38,169 @@
   <main>
     <section class="hero" id="about">
       <div class="hero-left">
-        <p class="handwritten">Hello, I'm Michelle</p>
-      </div>
-      <div class="hero-mid">
-        <img src="assets/me.png" alt="me as character" class="me">
-      </div>
-      <div class="hero-right">
-        <p>I'm interested in website development and graphic design. I enjoy learning new skills and showcasing them on my websites.</p>
-
-        <div class="hobbies">
-          <p class="handwritten">HOBBIES</p>
-          <ul>
-            <li>Dance</li>
-            <li>Calisthenics</li>
-            <li>3D modelling</li>
-            <li>Video editing</li>
-            <li>Air-dry clay sculpting</li>
-            <li>Embroidery</li>
-            <li>Videogames</li>
-          </ul>
+        <h1 class="handwritten hero-title">Hello, <br>I'm <span class="highlight">Michelle</span></h1>
+        <p class="hero-text">I'm interested in website development and graphic design. I enjoy learning new skills and showcasing them on my websites.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn">See my work</a>
+          <a href="#contact" class="link-underline">Contact me</a>
         </div>
       </div>
+      <div class="hero-mid">
+        <img src="assets/char.png" alt="me as character" class="me">
+        <span class="deco d1">✦</span>
+        <span class="deco d2">●</span>
+        <span class="deco d3">✦</span>
+      </div>
+      <div class="hero-right">
+        <div class="hobbies">
+          <h2>HOBBIES</h2>
+            <ul class="cute-list">
+              <li>Dance</li>
+              <li>Calisthenics</li>
+              <li>3D modelling</li>
+              <li>Video editing</li>
+              <li>Air-dry clay sculpting</li>
+              <li>Embroidery</li>
+              <li>Videogames</li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="wave">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z"/>
+        </svg>
+      </div>
+
     </section>
 
   <section class="skills">
     <div class="education">
-      <p class="handwritten">EDUCATION</p><br>
-
-      <p class="handwritten">2019 - 2023</p>
+      <h2>EDUCATION</h2>
+      <p><b>2019 - 2023</b></p>
       <p>OA a SOŠ zemědělská a ekologická Žatec</p>
-      <p>Economic Lyceum</p><br>
+      <p>Ekonomické lyceum</p><br>
 
-      <p class="handwritten">2023 - 2026</p>
-      <p>Charles University (Prague)</p>
-      <p>B.A. in Information Technology with a Focus on Education</p><br>
+      <p><b>2023 - 2026</b></p>
+      <p>Univerzita Karlova</p>
+      <p>Bakalářské studium - Informační technologie se zaměřením na vzdělávání</p><br>
 
-      <p class="handwritten">2026 - PRESENT</p>
-      <p>Charles University (Prague)</p>
-      <p>M.A. in ICT Education for Lower and Upper Secondary Schools</p>
+      <p><b>2026 - PRESENT</b></p>
+      <p>Univerzita Karlova</p>
+      <p>Magisterské studium - Učitelství informačních a komunikačních technologií pro 2. stupeň základní školy a střední školy</p>
     </div>
 
     <div class="technical-skills">
-      <p class="handwritten">TECHNICAL SKILLS</p>
-      <div class="skills-columns">
-        <ul>
-          <li>HTML, CSS, JS</li>
-          <li>Three.js</li>
-          <li>PHP (basic)</li>
-          <li>Java (basic)</li>
-          <li>AI</li>
-        </ul>
-        <ul>
-          <li>Blender</li>
-          <li>Figma</li>
-          <li>Adobe premier</li>
-          <li>Davinci resolve</li>
-          <li>Gimp</li>
-          <li>Audacity</li>
-        </ul>
+      <h2>TECHNICAL SKILLS</h2>
+      <div class="skill-groups">
+
+        <div class="skill-group">
+          <h3>Code</h3>
+          <ul class="cute-list">
+            <li>HTML, CSS, JS</li>
+            <li>Three.js</li>
+            <li>PHP (basic)</li>
+            <li>Java (basic)</li>
+            <li>AI</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Design &amp; media</h3>
+          <ul class="cute-list">
+            <li>Blender</li>
+            <li>Figma</li>
+            <li>Adobe Premiere</li>
+            <li>DaVinci Resolve</li>
+            <li>GIMP</li>
+            <li>Audacity</li>
+          </ul>
+        </div>
+
       </div>
     </div>
+
+
   </section>
 
-    <section class="work" id="projects">
+  <section class="work" id="projects">
+
+      <div class="wave-top">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,0 L1440,0 L1440,60 C1200,0 960,120 720,60 C480,0 240,120 0,60 Z"/>
+        </svg>
+      </div>
+
   <div class="work-sticky">
     <h2>MY WORK</h2>
     <div class="work-scroll">
+
       <div class="work-card">
-        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/blendit/index.html"><img src="work-img/bendit.png" alt="Blendit printscreen"></a>
+        <span class="num">01</span>
+        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/blendit/index.html" class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i></div>
+          <img src="work-img/bendit.png" alt="Blendit printscreen">
+        </a>
         <h3>Blendit</h3>
-        <p>Practical Part of my Bachelor's Thesis. It teaches fundamentals of program Blender for beginners.</p>
+        <p>Practical part of my Bachelor's Thesis. It teaches fundamentals of program Blender for beginners.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span><span>Three.js</span></div>
       </div>
 
       <div class="work-card">
-        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/CookBook/login.php"><img src="work-img/cookbook.png" alt="Cookbook prinscreen"></a>
+        <span class="num">02</span>
+        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/CookBook/login.php" class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i></div>
+          <img src="work-img/cookbook.png" alt="Cookbook printscreen">
+        </a>
         <h3>Cookbook</h3>
         <p>This website was created for sharing recipes with your friends and family</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>PHP</span></div>
       </div>
 
       <div class="work-card">
-        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/fitin/index.html"><img src="work-img/fitin.png" alt="FitIn printscreen"></a>
+        <span class="num">03</span>
+        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/fitin/index.html" class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i></div>
+          <img src="work-img/fitin.png" alt="FitIn printscreen">
+        </a>
         <h3>FitIn</h3>
         <p>Website for creating outfits from an wardrobe using local storage in browser</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
       </div>
 
       <div class="work-card">
-        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/solar/index.html"><img src="work-img/solar.png" alt="Solar system prinscreen"></a>
+        <span class="num">04</span>
+        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/solar/index.html" class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i></div>
+          <img src="work-img/solar.png" alt="Solar system printscreen">
+        </a>
         <h3>Solar System</h3>
         <p>Using Three.js</p>
+        <div class="tags"><span>Three.js</span><span>JS</span></div>
       </div>
 
       <div class="work-card">
-        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/kittv2/index.html"><img src="work-img/ucebny.png" alt="KITTV prinscreen"></a>
+        <span class="num">05</span>
+        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/kittv2/index.html" class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i></div>
+          <img src="work-img/ucebny.png" alt="KITTV printscreen">
+        </a>
         <h3>Prozkoumej učebny katedry KITTV na PedF UK</h3>
         <p>Interactive site that give you an insight of how lectures were being taught</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span><span>Three.js</span></div>
       </div>
 
       <div class="work-card">
-        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/kuma/"><img src="work-img/kuma.png" alt="KUMA prinscreen"></a>
+        <span class="num">06</span>
+        <a href="https://kraken.pedf.cuni.cz/~fenclovmich/kuma/" class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i></div>
+          <img src="work-img/kuma.png" alt="KUMA printscreen">
+        </a>
         <h3>KUMA</h3>
-        <p>Website is made for local anime group</p>
+        <p>Website made for local anime group</p>
+        <div class="tags"><span>HTML</span><span>CSS</span></div>
       </div>
-    </div>
-    
+
   </div>
 </section>
 
@@ -144,19 +208,26 @@
   </main>
 
   <footer class="contacts" id="contact">
-    <p class="handwritten">Thank you!</p>
-    <div class="contact-links">
-      <a href="https://github.com/miskexx"><img src="assets/github.png" alt="github"></a>
-      <a href="mailto:misa3142@seznam.cz"><img src="assets/mail.png" alt="mail"></a>
+    <span class="deco f1">✦</span>
+    <span class="deco f2">✦</span>
+    <span class="deco f3">●</span>
+
+    <h2 class="handwritten footer-title"><span>Thank you!</span></h2>
+    <p class="footer-text">Have an idea or a project? Let's talk.</p>
+
+    <div class="footer-actions">
+      <a href="mailto:misa3142@seznam.cz" class="btn">✦ Email me</a>
+      <a href="https://github.com/miskexx" class="btn">✦ GitHub</a>
     </div>
 
-    <p class="handwritten">Miskiexx 2026</p>
-  </footer>
+    <p class="handwritten footer-sign">Miskiexx 2026</p>
+</footer>
 
 <script>
   const work = document.querySelector('.work');
   const workScroll = document.querySelector('.work-scroll');
   const workSticky = document.querySelector('.work-sticky');
+  const progressBar = document.querySelector('.progress-bar');   // nový řádek
 
   let distance = 0;
 
@@ -172,11 +243,39 @@
     const progress = Math.min(Math.max(scrolled / distance, 0), 1);
 
     workScroll.style.transform = `translateX(-${progress * distance}px)`;
+
+    // ukazatel postupu (nový řádek)
+    progressBar.style.transform = `scaleX(${progress})`;
   }
 
   window.addEventListener('load', setupWorkSection);
   window.addEventListener('resize', setupWorkSection);
   window.addEventListener('scroll', onScroll);
+
+  const navLinks = document.querySelectorAll('.links a');
+
+  const sections = document.querySelectorAll('#about, #projects, #contact');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a =>
+          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id)
+        );
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach(s => observer.observe(s));
+
+  const header = document.querySelector('header');
+  let lastY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    header.classList.toggle('hide', y > lastY && y > 150);
+    lastY = y;
+  });
 </script>
 
 </body>

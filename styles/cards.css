@@ -1,0 +1,142 @@
+/* ==========================================================
+   STICKY NOTES: hobbies, education, technical skills
+   ========================================================== */
+
+.hobbies,
+.education,
+.technical-skills{
+  border: 2px solid var(--black);
+  border-radius: 14px;
+  box-shadow: 6px 6px 0 var(--black);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* "lepicí páska" */
+.hobbies::before,
+.education::before,
+.technical-skills::before{
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  width: 80px;
+  height: 24px;
+  background: rgba(138, 220, 142, 0.85);
+  border: 1px solid rgba(61, 58, 51, 0.25);
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+/* každý box trochu jinak natočený */
+.education{ transform: rotate(-1.5deg); }
+
+.technical-skills{
+  transform: rotate(1deg);
+  position: relative;          /* kvůli pásce */
+  max-width: 28vw;             /* přepisuje 24vw ze skills.css */
+}
+
+.hobbies{ transform: rotate(1.5deg); }
+
+.education:hover,
+.technical-skills:hover,
+.hobbies:hover{
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 9px 9px 0 var(--black);
+}
+
+/* ==========================================================
+   NADPISY BOXŮ: krátká růžová čárka pod nadpisem
+   ========================================================== */
+
+.hobbies h2,
+.education h2,
+.technical-skills h2{
+  margin: 0 0 18px 0;
+}
+
+.hobbies h2::after,
+.education h2::after,
+.technical-skills h2::after{
+  content: "";
+  display: block;
+  width: 44px;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background: var(--pink);
+}
+
+/* ==========================================================
+   ROZTOMILÝ SEZNAM: hvězdičky + čárkované linky jako v sešitu
+   ========================================================== */
+
+.hobbies .cute-list,
+.technical-skills .cute-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.cute-list li{
+  position: relative;
+  padding: 7px 0 7px 26px;
+  font-family: "Rubik", sans-serif;
+  border-bottom: 1.5px dashed rgba(61, 58, 51, 0.3);
+}
+
+.cute-list li:last-child{
+  border-bottom: none;
+}
+
+.cute-list li::before{
+  content: "✦";
+  position: absolute;
+  left: 2px;
+  top: 7px;
+  font-size: 0.9em;
+  color: var(--pink);
+  transition: transform 0.3s ease;
+}
+
+.cute-list li:hover::before{
+  transform: rotate(180deg) scale(1.25);
+}
+
+/* hobbies: tmavý text, střídavě růžová a zelená hvězdička */
+.hobbies .cute-list li{
+  color: var(--black);
+}
+
+.hobbies .cute-list li:nth-child(even)::before{
+  color: var(--lightgreen);
+}
+
+/* technical skills: krémový text na zeleném boxu */
+.technical-skills .cute-list li{
+  color: var(--white);
+  border-bottom-color: rgba(244, 240, 230, 0.35);
+}
+
+/* dvě skupiny vedle sebe */
+.skill-groups{
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.skill-group{
+  flex: 1;
+}
+
+.skill-group h3{
+  margin: 0 0 6px 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+  opacity: 0.85;
+}

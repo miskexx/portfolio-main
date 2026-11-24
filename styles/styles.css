@@ -14,6 +14,11 @@ p {
   font-family: "Rubik", sans-serif;
 }
 
+h2{
+  font-family: "Rubik", sans-serif;
+}
+
+
 html{
   scroll-behavior: smooth;
 }
@@ -25,10 +30,27 @@ html{
   --darkgreen: #204830;
 
   --black:#3D3A33;
+
+  --grid-size: 32px;
+  --grid-img:
+    linear-gradient(rgba(244, 240, 230, 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 240, 230, 0.25) 1px, transparent 1px);
 }
 
 body {
   margin: 0;
   padding: 0rem;
   background-color: var(--white);
+}
+
+::selection{
+  background: var(--pink);
+  color: var(--black);
+}
+
+.skills ::selection,
+.footer ::selection,
+.contacts ::selection{
+  background: var(--darkgreen);
+  color: var(--white);
 }

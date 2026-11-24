@@ -1,44 +1,85 @@
-header {
+header{
   width: 100%;
 }
 
-.pink {
-  background-color: #e8869a;
-  text-align: center;
-  padding: 5px 0;
+/* ==========================================================
+   HORNÍ PRUH (statický, bez animace)
+   ========================================================== */
+
+.pink{
+  background-color: var(--pink);
+  border-bottom: 2px solid var(--black);
+  padding: 7px 0;
 }
 
-.pink h1 {
-  margin: 0;
-  color: var(--black);
-  font-size: 16px;
+.strip{
+  display: flex;
+  justify-content: space-around;
+}
+
+.strip span{
+  font-family: "Rubik", sans-serif;   /* pro ruční písmo: "Miskiefont", sans-serif */
+  font-size: 14px;
   font-weight: 600;
-  font-family: "Rubik", sans-serif;
+  letter-spacing: 0.1em;
+  color: var(--black);
 }
 
-.nav-bar {
+.strip span:nth-child(odd){   /* hvězdičky */
+  color: var(--lightgreen);
+}
+
+/* ==========================================================
+   NAVIGAČNÍ LIŠTA
+   ========================================================== */
+
+.nav-bar{
   background-color: #f2ede1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 40px;
+  padding: 10px 40px;
+  border-bottom: 2px solid var(--black);
+  box-shadow: 0 4px 0 var(--black);
 }
 
-.logo {
-  height: 90px;
+.logo{
+  height: 70px;
 }
 
-.links {
+.links{
   display: flex;
   gap: 32px;
 }
 
-.links a {
+.links a{
+  position: relative;
   margin: 0;
+  padding: 6px 4px;
+  font-family: "Rubik", sans-serif;
   font-weight: 600;
   font-size: 18px;
-  cursor: pointer;
   text-decoration: none;
   color: var(--black);
-  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+}
+
+/* růžové podtržení, které se vykreslí při najetí */
+.links a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--pink);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.links a:hover::after,
+.links a.active::after{
+  transform: scaleX(1);
 }
